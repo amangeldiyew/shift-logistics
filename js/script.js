@@ -32,3 +32,21 @@ document.querySelectorAll('.services-carousel-wrapper').forEach(wrapper => {
     carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
   });
 });
+
+
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('show');
+  });
+}
+
+if (mobileClose) {
+  mobileClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('show');
+  });
+}
