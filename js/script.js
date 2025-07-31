@@ -1,52 +1,51 @@
-const images = document.querySelectorAll(".slides img");
-let index = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  // FADE SLIDES
+  const images = document.querySelectorAll(".slides img");
+  let index = 0;
 
-// Set the first image as active
-images[index].classList.add("active");
+  if (images.length > 0) {
+    images[index].classList.add("active", "zoomed");
 
-function fadeToNextSlide() {
-  images[index].classList.remove("active");
-  index = (index + 1) % images.length;
-  images[index].classList.add("active");
-}
+    function fadeToNextSlide() {
+      images[index].classList.remove("active", "zoomed");
+      index = (index + 1) % images.length;
+      images[index].classList.add("active", "zoomed");
+    }
 
-setInterval(fadeToNextSlide, 5000);
+    setInterval(fadeToNextSlide, 5000);
+  }
 
+  // SERVICES CAROUSEL
+  document.querySelectorAll('.services-carousel-wrapper').forEach(wrapper => {
+    const carousel = wrapper.querySelector('.services-carousel');
+    const leftBtn = wrapper.querySelector('.arrow.left');
+    const rightBtn = wrapper.querySelector('.arrow.right');
 
+    if (carousel && leftBtn && rightBtn) {
+      leftBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+      });
 
-
-//Carousel - Services
-document.querySelectorAll('.services-carousel-wrapper').forEach(wrapper => {
-  const carousel = wrapper.querySelector('.services-carousel');
-  const card = wrapper.querySelector('.service-card');
-  const leftArrow = wrapper.querySelector('.arrow.left');
-  const rightArrow = wrapper.querySelector('.arrow.right');
-
-  const cardWidth = card.offsetWidth + 30;
-
-  rightArrow.addEventListener('click', () => {
-    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      rightBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
   });
 
-  leftArrow.addEventListener('click', () => {
-    carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-  });
+  // HAMBURGER MENU
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('show');
+    });
+  }
+
+  if (mobileClose) {
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+    });
+  }
 });
-
-
-// Hamburger menu toggle
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
-
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.add('show');
-  });
-}
-
-if (mobileClose) {
-  mobileClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('show');
-  });
-}

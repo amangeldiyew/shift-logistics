@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SHIFT Logistics</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,401,500,501,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
   
@@ -13,21 +17,21 @@
   <div class="page-wrapper">
     <div class="container">
       <div class="logo">
-        <a href="#">
+        <a href="index.html">
           <img src="images/logo.png" alt="SHIFT Logo" class="logo-img" />
         </a>
       </div>
 
       <nav class="nav-links">
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#weekly-prices">Weekly Prices</a>
-        <a href="#get-a-quote">Get a Quote</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="weekly-prices.html">Weekly Prices</a>
+        <a href="contact-us/get-a-quote.html">Get a Quote</a>
       </nav>
 
       <div class="contact-btn">
-        <a href="#contact">Contact Us</a>
+        <a href="contact-us.html">Contact Us</a>
       </div>
 
       <!-- Hamburger Icon -->
@@ -41,12 +45,12 @@
   <div class="mobile-overlay" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">&times;</button>
     <div class="mobile-menu-content">
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#industries">Industries</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
       <a href="#weekly-prices">Weekly Prices</a>
-      <a href="#get-a-quote">Get a Quote</a>
-      <a href="#contact">Contact Us</a>
+      <a href="contact-us/get-a-quote.html">Get a Quote</a>
+      <a href="contact-us.html">Contact Us</a>
     </div>
     <div class="mobile-logo">
       <img src="images/logo.png" alt="SHIFT Logo" />
@@ -95,7 +99,7 @@
 <section id="services" class="services-section">
   <div class="page-wrapper">
     <div class="container">
-      <div class="services-header">
+      <div class="section-header">
         <h2 class="section-title">
           <span>Our Logistics Services</span>
         </h2>
@@ -108,38 +112,74 @@
         <button class="arrow left">&#8592;</button>
 
         <div class="services-carousel">
-          <div class="service-card">
-            <img src="images/service-consulting.webp" alt="Consulting" />
-            <h3>Consulting</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/service-road.webp" alt="Road Freight" />
-            <h3>Road Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/service-rail.webp" alt="Rail Freight" />
-            <h3>Rail Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/service-air.webp" alt="Air Freight" />
-            <h3>Air Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/service-5.webp" alt="Air Freight" />
-            <h3>Air Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/service-6.webp" alt="Air Freight" />
-            <h3>Air Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-        </div>
 
+          <a href="services/consulting.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-consulting-bw.webp" alt="Consulting" class="bw-img" />
+              <img src="images/service-consulting-color.webp" alt="Consulting" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Consulting</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/road-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-road-bw.webp" alt="Road Freight" class="bw-img" />
+              <img src="images/service-road-color.webp" alt="Road Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Road Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/rail-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-rail-bw.webp" alt="Rail Freight" class="bw-img" />
+              <img src="images/service-rail-color.webp" alt="Rail Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Rail Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/air-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-air-bw.webp" alt="Air Freight" class="bw-img" />
+              <img src="images/service-air-color.webp" alt="Air Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Air Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/air-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-air-bw.webp" alt="Air Freight" class="bw-img" />
+              <img src="images/service-air-color.webp" alt="Air Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Air Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/rail-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/service-rail-bw.webp" alt="Rail Freight" class="bw-img" />
+              <img src="images/service-rail-color.webp" alt="Rail Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Rail Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+        </div>
         <button class="arrow right">&#8594;</button>
       </div>
     </div>
@@ -156,7 +196,7 @@
     <div class="container">
       <div class="services-header">
         <h2 class="section-title">
-          <span>Our Logistics Services</span>
+          <span>Industries We Serve</span>
         </h2>
         <p class="section-subtitle">
           We provide end-to-end logistics, consulting, and freight solutions tailored to your specific needs.
@@ -167,38 +207,74 @@
         <button class="arrow left">&#8592;</button>
 
         <div class="services-carousel">
-          <div class="service-card">
-            <img src="images/industries-1.webp" alt="Consulting" />
-            <h3>Heavy Equipment</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/industries-2.webp" alt="Road Freight" />
-            <h3>Oil & Gas</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/industries-3.webp" alt="Rail Freight" />
-            <h3>Automotive</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/industries-4.webp" alt="Air Freight" />
-            <h3>Healthcare</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/industries-5.webp" alt="Air Freight" />
-            <h3>Air Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-          <div class="service-card">
-            <img src="images/industries-6.webp" alt="Air Freight" />
-            <h3>Air Freight</h3>
-            <a href="#">Learn more</a>
-          </div>
-        </div>
 
+          <a href="industries/healthcare.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-1.webp" alt="Consulting" class="bw-img" />
+              <img src="images/industries-1.webp" alt="Consulting" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Healthcare</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/road-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-2.webp" alt="Road Freight" class="bw-img" />
+              <img src="images/industries-2.webp" alt="Road Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Road Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/rail-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-3.webp" alt="Rail Freight" class="bw-img" />
+              <img src="images/industries-3.webp" alt="Rail Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Rail Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/air-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-4.webp" alt="Air Freight" class="bw-img" />
+              <img src="images/industries-4.webp" alt="Air Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Air Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/air-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-5.webp" alt="Air Freight" class="bw-img" />
+              <img src="images/industries-5.webp" alt="Air Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Air Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+          <a href="services/rail-freight.html" class="service-card">
+            <div class="image-wrapper">
+              <img src="images/industries-6.webp" alt="Rail Freight" class="bw-img" />
+              <img src="images/industries-6.webp" alt="Rail Freight" class="color-img" />
+            </div>
+            <div class="card-text">
+              <h3>Rail Freight</h3>
+              <span>Learn more</span>
+            </div>
+          </a>
+
+        </div>
         <button class="arrow right">&#8594;</button>
       </div>
     </div>
@@ -377,13 +453,6 @@
 
 
 
-
-
-
-  <!-- Footer -->
-  <footer>
-    <!-- To be added -->
-  </footer>
 
   <script src="js/script.js"></script>
 </body>
